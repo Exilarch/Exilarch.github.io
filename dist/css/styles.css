@@ -368,7 +368,7 @@ textarea {
 
 fieldset {
   min-width: 0;
-  padding: 0;
+  padding: 5;
   margin: 0;
   border: 0;
 }
@@ -889,6 +889,9 @@ progress {
     flex: 0 0 auto;
     width: 16.6666666667%;
   }
+}
+.center {
+  width: 800px;
 }
 .col-auto {
   flex: 0 0 auto;
