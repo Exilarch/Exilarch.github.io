@@ -46,17 +46,31 @@
                                 <!-- * * * * * * * * * * * * * * *-->
                                 <!-- * * Contact Form * *-->
                                 <!-- * * * * * * * * * * * * * * *-->
-                                <form class="gform pure-form pure-form-stacked" method="POST" data-email="sntprecision@yahoo.com" action="https://script.google.com/macros/s/AKfycbzQuijA4scgguy7Z1GMTb-Tm5RyBZfchyc7qilVQuXaG6l4_Q0/exec">
+                                <form class="gform pure-form pure-form-stacked" method="POST" action="https://script.google.com/macros/s/AKfycbzQuijA4scgguy7Z1GMTb-Tm5RyBZfchyc7qilVQuXaG6l4_Q0/exec">
+                                    <!-- Anti-spam honeypot -->
+                                    <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+                                        <label for="website">Leave this field empty</label>
+                                        <input
+                                            type="text"
+                                            id="website"
+                                            name="honeypot"
+                                            tabindex="-1"
+                                            autocomplete="off"
+                                        />
+                                    </div>
+                                    
+                                    <!-- Submission timestamp -->
+                                    <input type="hidden" name="formStartTime" id="formStartTime">
                                     <!-- Name input-->
                                     <div class="form-elements">
                                         <fieldset class="pure-group">
                                             <label for="name">Full name:</label>
-                                            <input size="32" style="font-size:16pt;" id="name" name="name" placeholder="Enter your name..."/>
+                                            <input size="32" style="font-size:16pt;" id="name" name="name" placeholder="Enter your name..." required />
                                         </fieldset>
                                     <!-- Email address input-->
                                         <fieldset class="pure-group">
                                             <label for="email">Email address:</label>
-                                            <input size="29" style="font-size:16pt;" id="email" name="email" type="email" placeholder="name@example.com"/>
+                                            <input size="29" style="font-size:16pt;" id="email" name="email" type="email" placeholder="name@example.com" required />
                                         </fieldset>
                                     <!-- Phone number input-->
                                         <fieldset class="pure-group">
@@ -67,7 +81,7 @@
                                     <!-- Message input-->
                                         <fieldset class="pure-group">
                                             <label for="message">Message:</label>
-                                            <textarea rows="5" cols="50" name="message" id="message" type="text" placeholder="Enter your message here..."></textarea>
+                                            <textarea rows="5" cols="50" name="message" id="message" type="text" placeholder="Enter your message here..." required></textarea>
                                         </fieldset>
 
                                     </div>
@@ -111,5 +125,8 @@
         <!-- Core theme JS-->
 <!--         <script src="js/scripts.js"></script> -->
         <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+    <script>
+        document.getElementById("formStartTime").value = Date.now();
+    </script>
     </body>
 </html>
