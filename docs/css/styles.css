@@ -10875,3 +10875,67 @@ html {
   background-repeat: no-repeat;
   min-height: 15rem;
 }
+
+/* Professional contact form */
+
+.gform {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.gform fieldset {
+    border: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.gform .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #212529;
+    font-size: 1rem;
+}
+
+.gform .form-control {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.gform .form-control-lg {
+    min-height: 50px;
+}
+
+.gform textarea.form-control {
+    min-height: 170px;
+    resize: vertical;
+}
+
+.gform .form-control:focus {
+    border-color: #6c8ebf;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
+}
+
+.gform button {
+    min-width: 190px;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.gform .text-danger {
+    font-size: 0.9em;
+}
+
+@media (max-width: 576px) {
+    .gform {
+        max-width: 100%;
+    }
+
+    .gform button {
+        width: 100%;
+    }
+}
